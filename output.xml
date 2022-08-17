@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.6 on win32)" generated="20220817 01:06:41.465" rpa="false" schemaversion="3">
+<suite id="s1" name="Lideranca IRC &amp; Lideranca Download">
+<suite id="s1-s1" name="Lideranca IRC" source="C:\Users\adail\lideranca\Lideranca_IRC.robot">
+<test id="s1-s1-t1" name="Clicar Botao IRC" line="6">
+<kw name="Dado que acessei a página ${TARGET}" sourcename="Dado que acessei a página ${TARGET}">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${TARGET}</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option('excludeSwitches', ['enable-logging'])</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220817 01:06:41.658" level="INFO">Opening browser 'chrome' to base url 'https://www.selenium.dev/'.</msg>
+<status status="PASS" starttime="20220817 01:06:41.658" endtime="20220817 01:06:43.582"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220817 01:06:43.582" endtime="20220817 01:06:43.710"/>
+</kw>
+<status status="PASS" starttime="20220817 01:06:41.658" endtime="20220817 01:06:43.710"/>
+</kw>
+<kw name="Quando clico no icone ${IRC}" sourcename="Quando clico no icone ${IRC}">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${IRC}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20220817 01:06:43.710" endtime="20220817 01:06:43.998"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${IRC}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220817 01:06:43.998" endtime="20220817 01:06:44.015"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${IRC}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220817 01:06:44.015" level="INFO">Clicking element 'xpath=/html/body/div/footer/div/div/div[2]/ul/li[4]/a/i'.</msg>
+<status status="PASS" starttime="20220817 01:06:44.015" endtime="20220817 01:06:44.074"/>
+</kw>
+<status status="PASS" starttime="20220817 01:06:43.710" endtime="20220817 01:06:44.074"/>
+</kw>
+<kw name="Então sou direcionado para a página ${TARGET2}" sourcename="Então sou direcionado para a página ${TARGET2}">
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>NEW</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" starttime="20220817 01:06:44.074" endtime="20220817 01:06:44.082"/>
+</kw>
+<kw name="Wait Until Location Contains" library="SeleniumLibrary">
+<arg>${TARGET2}</arg>
+<doc>Waits until the current URL contains ``expected``.</doc>
+<status status="PASS" starttime="20220817 01:06:44.083" endtime="20220817 01:06:46.607"/>
+</kw>
+<status status="PASS" starttime="20220817 01:06:44.074" endtime="20220817 01:06:46.607"/>
+</kw>
+<kw name="E verifico que o botão ${INICIAR} está desabilitado" sourcename="E verifico que o botão ${INICIAR} está desabilitado">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css=button.u-button.u-button-primary.u-submit.kiwi-welcome-simple-start</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220817 01:06:46.615" endtime="20220817 01:06:46.647"/>
+</kw>
+<kw name="Element Should Be Disabled" library="SeleniumLibrary">
+<arg>css=button.u-button.u-button-primary.u-submit.kiwi-welcome-simple-start</arg>
+<doc>Verifies that element identified by ``locator`` is disabled.</doc>
+<status status="PASS" starttime="20220817 01:06:46.647" endtime="20220817 01:06:46.671"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220817 01:06:46.671" endtime="20220817 01:06:48.778"/>
+</kw>
+<status status="PASS" starttime="20220817 01:06:46.607" endtime="20220817 01:06:48.778"/>
+</kw>
+<status status="PASS" starttime="20220817 01:06:41.658" endtime="20220817 01:06:48.778"/>
+</test>
+<doc>Teste para Liderança Capitalização</doc>
+<status status="PASS" starttime="20220817 01:06:41.480" endtime="20220817 01:06:48.778"/>
+</suite>
+<suite id="s1-s2" name="Lideranca Download" source="C:\Users\adail\lideranca\Lideranca_Download.robot">
+<test id="s1-s2-t1" name="Clicar Link Downloads" line="6">
+<kw name="Dado que acessei a página ${TARGET}" sourcename="Dado que acessei a página ${TARGET}">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${TARGET}</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option('excludeSwitches', ['enable-logging'])</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220817 01:06:48.778" level="INFO">Opening browser 'chrome' to base url 'https://www.selenium.dev/'.</msg>
+<status status="PASS" starttime="20220817 01:06:48.778" endtime="20220817 01:06:50.706"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220817 01:06:50.706" endtime="20220817 01:06:50.836"/>
+</kw>
+<status status="PASS" starttime="20220817 01:06:48.778" endtime="20220817 01:06:50.836"/>
+</kw>
+<kw name="Quando clico no link ${DOWNLOADS}" sourcename="Quando clico no link ${DOWNLOADS}">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${DOWNLOADS}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220817 01:06:50.836" level="INFO">Clicking element 'xpath=//*[@id="main_navbar"]/ul/li[3]/a/span'.</msg>
+<status status="PASS" starttime="20220817 01:06:50.836" endtime="20220817 01:06:51.324"/>
+</kw>
+<status status="PASS" starttime="20220817 01:06:50.836" endtime="20220817 01:06:51.325"/>
+</kw>
+<kw name="Então sou direcionado para a página ${DOWNLOADPAGE}" sourcename="Então sou direcionado para a página ${DOWNLOADPAGE}">
+<kw name="Wait Until Location Contains" library="SeleniumLibrary">
+<arg>${DOWNLOADPAGE}</arg>
+<doc>Waits until the current URL contains ``expected``.</doc>
+<status status="PASS" starttime="20220817 01:06:51.325" endtime="20220817 01:06:51.338"/>
+</kw>
+<status status="PASS" starttime="20220817 01:06:51.325" endtime="20220817 01:06:51.338"/>
+</kw>
+<status status="PASS" starttime="20220817 01:06:48.778" endtime="20220817 01:06:51.339"/>
+</test>
+<doc>Teste para Liderança Capitalização</doc>
+<status status="PASS" starttime="20220817 01:06:48.778" endtime="20220817 01:06:51.341"/>
+</suite>
+<status status="PASS" starttime="20220817 01:06:41.465" endtime="20220817 01:06:51.341"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="Lideranca IRC &amp; Lideranca Download">Lideranca IRC &amp; Lideranca Download</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Lideranca IRC">Lideranca IRC &amp; Lideranca Download.Lideranca IRC</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s2" name="Lideranca Download">Lideranca IRC &amp; Lideranca Download.Lideranca Download</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
